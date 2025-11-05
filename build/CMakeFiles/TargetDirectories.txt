@@ -1,6 +1,0 @@
-/mnt/big/study/for_portfolio/smart_ptr_project/build/CMakeFiles/smart_ptr_project.dir
-/mnt/big/study/for_portfolio/smart_ptr_project/build/CMakeFiles/smart_ptr.dir
-/mnt/big/study/for_portfolio/smart_ptr_project/build/CMakeFiles/test_ptr.dir
-/mnt/big/study/for_portfolio/smart_ptr_project/build/CMakeFiles/test.dir
-/mnt/big/study/for_portfolio/smart_ptr_project/build/CMakeFiles/edit_cache.dir
-/mnt/big/study/for_portfolio/smart_ptr_project/build/CMakeFiles/rebuild_cache.dir

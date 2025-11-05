@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test_ptr.dir/tests/smart_ptrs_test.cpp.o -o test_ptr  /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 
