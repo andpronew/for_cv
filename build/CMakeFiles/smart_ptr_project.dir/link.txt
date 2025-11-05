@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/smart_ptr_project.dir/src/my_pointers.cpp.o -o smart_ptr_project 

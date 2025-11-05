@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/big/study/for_portfolio/smart_ptr_project/build/test_ptr[1]_tests.cmake")
+  include("/mnt/big/study/for_portfolio/smart_ptr_project/build/test_ptr[1]_tests.cmake")
+else()
+  add_test(test_ptr_NOT_BUILT test_ptr_NOT_BUILT)
+endif()
