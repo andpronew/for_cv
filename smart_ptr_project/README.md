@@ -1,13 +1,17 @@
-**Smart Pointers Library** (UniquePtr, SharedPtr, WeakPtr)
+#**Smart Pointers Library** (UniquePtr, SharedPtr, WeakPtr)
 
 Goal: Show understanding of memory management and RAII.
+
 Skills: new/delete, ownership semantics, move constructors, destructors.
+
 Description: Recreated std::unique_ptr, std::shared_ptr, std::weak_ptr with basic reference counting. Included safety checks, copy/move semantics, and optional debug logs, as well as thread-safe ref counting.
 
 This project is a clean, educational C++ implementation of three core smart pointer types:
 
 UniquePtr – exclusive ownership model (like std::unique_ptr)
+
 SharedPtr – reference-counted shared ownership (like std::shared_ptr)
+
 WeakPtr – non-owning observer of a SharedPtr (like std::weak_ptr)
 
 ✨ Features
