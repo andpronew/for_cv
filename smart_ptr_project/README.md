@@ -29,6 +29,7 @@ This project is a clean, educational C++ implementation of three core smart poin
 ✅ C++17 compliant
 
 ## 📁 Project Structure
+```text
 smart_ptr_project/
 ├── include/
 │   ├── my_unique_ptr.hpp       # UniquePtr implementation
@@ -40,6 +41,7 @@ smart_ptr_project/
 │   └── smart_ptrs_test.cpp     # Unit tests with GoogleTest
 ├── CMakeLists.txt
 └── README.md
+```
 
 🛠️ Build Instructions
 
@@ -53,19 +55,20 @@ GoogleTest
  installed or added as a submodule
 
 🧪 Build & Run
-# Clone the repository and navigate into it
+### Clone the repository and navigate into it
 git clone https://github.com/andpronew/for_cv.git
 cd for_cv
 
-# Build project and tests
+### Build project and tests
+```
 mkdir build && cd build
 cmake ..
 make
-
-# Run demo
+```
+### Run demo
 ./smart_ptr
 
-# Run unit tests
+### Run unit tests
 ./test_ptr
 
 🎯 Demo Output (with explanations):
