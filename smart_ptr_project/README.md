@@ -28,7 +28,7 @@ This project is a clean, educational C++ implementation of three core smart poin
 
 ✅ C++17 compliant
 
-## 📁 Project Structure
+### 📁 Project Structure
 ```text
 smart_ptr_project/
 ├── include/
@@ -72,6 +72,7 @@ make
 ./test_ptr
 
 🎯 Demo Output (with explanations):
+```
 --- UniquePtr Demo ---
 Test(1) constructed:
 The program creates a UniquePtr<Test> using new Test(1). The Test constructor logs this message.
@@ -102,7 +103,9 @@ s1 goes out of scope, Ref count reaches 0, custom SharedPtr::release() deletes t
 Test(1) destroyed:
 This is from the earlier UniquePtr<Test> u2 going out of scope at the very end of main() (after u1 was moved into u2); since u2 owns Test(1), it deletes it.
 This confirms the destructors work correctly, and ownership is handled as expected.
+```
 
+```
 Summary:
 Message						                      Meaning / Trigger
 Test(1) constructed				            UniquePtr<Test> u1(new Test(1))
@@ -114,7 +117,9 @@ Hello from Test(2) (twice)			      s1->greet() and s2->greet()
 Ref count: 2				 	                 s1 and s2 both point to the same object
 Ref count after s2 destroyed: 1		  s2 goes out of scope
 Test(2) destroyed				              s1 goes out of scope → last SharedPtr releases the object
+```
 
+```
 ✅ Unit Test Output:
 [==========] Running 6 tests from 3 test suites.
 [----------] Global test environment set-up.
@@ -137,6 +142,7 @@ Test(2) destroyed				              s1 goes out of scope → last SharedPtr relea
 [       OK ] WeakPtrTest.LockOnExpired (0 ms)
 
 [  PASSED  ] 6 tests.
+```
 
 📚 Learning Goals
 
