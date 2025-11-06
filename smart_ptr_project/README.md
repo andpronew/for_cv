@@ -1,4 +1,4 @@
-#**Smart Pointers Library** (UniquePtr, SharedPtr, WeakPtr)
+### **Smart Pointers Library** (UniquePtr, SharedPtr, WeakPtr)
 
 **Goal**: Show understanding of memory management and RAII.
 
@@ -28,7 +28,7 @@ This project is a clean, educational C++ implementation of three core smart poin
 
 ✅ C++17 compliant
 
-📁 Project Structure
+## 📁 Project Structure
 smart_ptr_project/
 ├── include/
 │   ├── my_unique_ptr.hpp       # UniquePtr implementation
