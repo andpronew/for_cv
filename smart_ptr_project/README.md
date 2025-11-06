@@ -1,4 +1,4 @@
-### **Smart Pointers Library** (UniquePtr, SharedPtr, WeakPtr)
+# **Smart Pointers Library** (UniquePtr, SharedPtr, WeakPtr)
 
 **Goal**: Show understanding of memory management and RAII.
 
