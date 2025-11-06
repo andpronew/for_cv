@@ -14,7 +14,7 @@ This project is a clean, educational C++ implementation of three core smart poin
 
 **WeakPtr** – non-owning observer of a SharedPtr (like std::weak_ptr)
 
-✨ ### Features
+✨ ###Features
 
 ✅ Header-only design with inline documentation
 
@@ -28,7 +28,7 @@ This project is a clean, educational C++ implementation of three core smart poin
 
 ✅ C++17 compliant
 
-### 📁 Project Structure
+📁 ###Project Structure
 ```text
 smart_ptr_project/
 ├── include/
@@ -43,7 +43,7 @@ smart_ptr_project/
 └── README.md
 ```
 
-🛠️ ### Build Instructions
+🛠️ ###Build Instructions
 
 Dependencies:
 
@@ -54,26 +54,26 @@ A C++17-compliant compiler (GCC/Clang/MSVC)
 GoogleTest
  installed or added as a submodule
 
-🧪 ### Build & Run
+🧪 ###Build & Run
 Clone the repository and navigate into it
 
 git clone https://github.com/andpronew/for_cv.git
 
 cd for_cv
 
-### Build project and tests
+###Build project and tests
 ```
 mkdir build && cd build
 cmake ..
 make
 ```
-### Run demo
+###Run demo
 ./smart_ptr
 
-### Run unit tests
+###Run unit tests
 ./test_ptr
 
-🎯 ### Demo Output (with explanations):
+🎯 ###Demo Output (with explanations):
 ```
 --- UniquePtr Demo ---
 Test(1) constructed:
@@ -146,7 +146,7 @@ Test(2) destroyed				              s1 goes out of scope → last SharedPtr relea
 [  PASSED  ] 6 tests.
 ```
 
-📚 ### Learning Goals
+📚 ###Learning Goals
 
 This implementation demonstrates:
 
