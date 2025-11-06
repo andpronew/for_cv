@@ -1,4 +1,4 @@
-Smart Pointers Library (UniquePtr, SharedPtr, WeakPtr)
+**Smart Pointers Library** (UniquePtr, SharedPtr, WeakPtr)
 
 This project is a clean, educational C++ implementation of three core smart pointer types:
 
