@@ -14,7 +14,7 @@ This project is a clean, educational C++ implementation of three core smart poin
 
 **WeakPtr** – non-owning observer of a SharedPtr (like std::weak_ptr)
 
-###✨ Features
+### ✨ Features
 
 ✅ Header-only design with inline documentation
 
