@@ -2,8 +2,7 @@
 
 Goal: Show understanding of memory management and RAII.
 Skills: new/delete, ownership semantics, move constructors, destructors.
-Description: Recreate std::unique_ptr, std::shared_ptr, std::weak_ptr with basic reference counting. Include safety checks, copy/move semantics, and optional debug logs.
- Stretch: Add thread-safe ref counting or custom deleters.
+Description: Recreated std::unique_ptr, std::shared_ptr, std::weak_ptr with basic reference counting. Included safety checks, copy/move semantics, and optional debug logs, as well as thread-safe ref counting.
 
 This project is a clean, educational C++ implementation of three core smart pointer types:
 
