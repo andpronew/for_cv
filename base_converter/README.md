@@ -1,4 +1,4 @@
-# *Base Converter Project with CMake and GoogleTest**
+# *Base Converter Project with CMake and GoogleTest*
 
 **Goal**: The program converts numbers from an input base b1 to an output base b2 (with bases between 2 and 16 including). Digits above 9 are represented by letters A–F
 
@@ -16,7 +16,7 @@ base_converter/
 │   ├── my_converter.cpp
 │   └── main.cpp
 └── tests/
- |   └── my_test_conversion.cpp
+|   └── my_test_conversion.cpp
 └── README.md
 ```
 
