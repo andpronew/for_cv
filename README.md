@@ -1,7 +1,9 @@
 # 🧩 C++ Projects Collection — *for_cv*
 
-This repository contains a collection of **educational and portfolio-level C++ projects**, each demonstrating a core concept of modern C++ programming and computer systems design.  
+This repository contains a collection of **educational and portfolio-level C++ projects**, each demonstrating a core concept of modern C++ programming and computer systems design.
+
 Every project is self-contained, built with **CMake**, and includes **GoogleTest**-based unit tests.  
+
 Detailed descriptions, build instructions, and usage examples are located in the respective project folders.
 
 ---
@@ -53,4 +55,5 @@ This repository serves as a **demonstration of C++ programming proficiency**, fo
 ## 🧩 Author
 
 **Andrii Hisko** — C++ developer (PhD in physics) 
+
 Exploring the intersection of **computer architecture**, **systems programming**, and **mathematical algorithms** through practical C++ projects.
