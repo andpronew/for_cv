@@ -19,7 +19,25 @@ binary_operations/
 └── README.md
 ```
 
-### Build project and tests
+- **`my_binary_operations.cpp/.h`** — core logic for addition and subtraction  
+- **`main.cpp`** — CLI to test operations manually  
+- **`my_test_binary.cpp`** — unit tests (GoogleTest)  
+
+---
+
+## ⚙️ Build Instructions
+
+### 1. Clone repository
+```bash
+git clone https://github.com/yourname/binary_operations.git
+cd binary_operations
+```
+
+### 2. Get GoogleTest (if not included)
+
+git clone https://github.com/google/googletest.git external/googletest
+
+### 3. Build project and tests
 ```
 mkdir build && cd build
 cmake ..
@@ -29,6 +47,8 @@ make
 ~/binary_operations/build/src$ ./my_binary
 
 ### Run unit tests
+ctest --output-on-failure
+
 ~/binary_operations/build/tests$ ./my_binary_tests
 
 ### 🎯 Demo Output (with explanations):
