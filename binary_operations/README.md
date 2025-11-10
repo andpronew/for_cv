@@ -26,10 +26,10 @@ cmake ..
 make
 ```
 ### Run demo
-~/base_converter/build/src$ ./my_binary
+~/binary_operations/build/src$ ./my_binary
 
 ### Run unit tests
-~/binary_operations/built/tests$ ./my_binary_tests
+~/binary_operations/build/tests$ ./my_binary_tests
 
 ### 🎯 Demo Output (with explanations):
 ```
