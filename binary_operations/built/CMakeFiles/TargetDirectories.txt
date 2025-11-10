@@ -1,0 +1,12 @@
+/mnt/big/study/binary_operations/built/CMakeFiles/test.dir
+/mnt/big/study/binary_operations/built/CMakeFiles/edit_cache.dir
+/mnt/big/study/binary_operations/built/CMakeFiles/rebuild_cache.dir
+/mnt/big/study/binary_operations/built/src/CMakeFiles/binary_lib.dir
+/mnt/big/study/binary_operations/built/src/CMakeFiles/my_binary.dir
+/mnt/big/study/binary_operations/built/src/CMakeFiles/test.dir
+/mnt/big/study/binary_operations/built/src/CMakeFiles/edit_cache.dir
+/mnt/big/study/binary_operations/built/src/CMakeFiles/rebuild_cache.dir
+/mnt/big/study/binary_operations/built/tests/CMakeFiles/my_binary_tests.dir
+/mnt/big/study/binary_operations/built/tests/CMakeFiles/test.dir
+/mnt/big/study/binary_operations/built/tests/CMakeFiles/edit_cache.dir
+/mnt/big/study/binary_operations/built/tests/CMakeFiles/rebuild_cache.dir

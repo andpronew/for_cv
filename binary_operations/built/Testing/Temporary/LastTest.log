@@ -1,0 +1,51 @@
+Start testing: Nov 10 13:04 EET
+----------------------------------------------------------
+1/1 Testing: my_binary_tests
+1/1 Test: my_binary_tests
+Command: "/mnt/big/study/binary_operations/built/tests/my_binary_tests"
+Directory: /mnt/big/study/binary_operations/built/tests
+"my_binary_tests" start time: Nov 10 13:04 EET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from BinaryOperationsTest
+[ RUN      ] BinaryOperationsTest.SimpleAddition
+Sum: 0011
+Sum: 1000
+[       OK ] BinaryOperationsTest.SimpleAddition (0 ms)
+[ RUN      ] BinaryOperationsTest.AdditionWithCarry
+Sum: 0000
+Carry: 1
+[       OK ] BinaryOperationsTest.AdditionWithCarry (0 ms)
+[ RUN      ] BinaryOperationsTest.SimpleSubtraction
+Sum: 0010
+Carry: 1
+Sum: 10101
+Carry: 1
+[       OK ] BinaryOperationsTest.SimpleSubtraction (0 ms)
+[ RUN      ] BinaryOperationsTest.BorrowPropagation
+Sum: 0111
+Carry: 1
+[       OK ] BinaryOperationsTest.BorrowPropagation (0 ms)
+[ RUN      ] BinaryOperationsTest.EqualInputs
+Sum: 0000
+Carry: 1
+[       OK ] BinaryOperationsTest.EqualInputs (0 ms)
+[ RUN      ] BinaryOperationsTest.LengthMismatch
+[       OK ] BinaryOperationsTest.LengthMismatch (0 ms)
+[----------] 6 tests from BinaryOperationsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"my_binary_tests" end time: Nov 10 13:04 EET
+"my_binary_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 10 13:04 EET

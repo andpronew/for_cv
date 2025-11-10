@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/my_binary.dir/main.cpp.o -o my_binary  libbinary_lib.a 
