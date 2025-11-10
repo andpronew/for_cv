@@ -16,11 +16,7 @@ Focus: bitwise logic, carry propagation, and hardware-level arithmetic emulation
 
 ### [🔢 Base Converter Project](./base_converter)
 **Goal:** Convert numbers between arbitrary bases *(2 ≤ b ≤ 16)*, with digits above 9 represented by letters **A–F**.  
-**Skills learned:** Deep understanding of **base conversion**, character–digit mapping, and string-based arithmetic.  
-Implements conversion functions for:
-- base-`b₁` string → decimal  
-- decimal → base-`b₂` string  
-Tested via **GoogleTest**, built with **CMake**.
+**Skills learned:** Deep understanding of **base conversion**, character–digit mapping, and string-based arithmetic. Tested via **GoogleTest**, built with **CMake**.
 
 ---
 
