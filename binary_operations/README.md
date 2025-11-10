@@ -1,22 +1,21 @@
-# *Base Converter Project with CMake and GoogleTest*
+# 🧮 Binary Operations Library (C++)
 
-**Goal**: The program converts numbers from an input base b1 to an output base b2 (with bases between 2 and 16 including). Digits above 9 are represented by letters A–F
-
-**Skills**: to learn deeply aconversion between different base numbers
-
-**Description**: The code provides functions to map characters to values and vice versa, convert an input string in base b1 to a decimal value, and convert a decimal value to a string in base b2
-
+A simple C++ project that demonstrates **manual binary addition and subtraction**
+using **two’s complement arithmetic** — exactly how real CPU ALUs perform it.
 
 ### 📁 Project Structure
 ```text
-base_converter/
+binary_operations/
 ├── CMakeLists.txt
 ├── src/
-│   ├── my_converter.h
-│   ├── my_converter.cpp
-│   └── main.cpp
-└── tests/
- |   └── my_test_conversion.cpp
+│ ├── my_binary_operations.cpp
+│ ├── my_binary_operations.h
+│ ├── main.cpp
+│ └── CMakeLists.txt
+├── tests/
+│ ├── my_test_binary.cpp
+│ └── CMakeLists.txt
+└── external/googletest/
 └── README.md
 ```
 
@@ -27,52 +26,58 @@ cmake ..
 make
 ```
 ### Run demo
-~/base_converter/build/src$ ./BaseConverterApp
+~/base_converter/build/src$ ./my_binary
 
 ### Run unit tests
-./BaseConverterTests
+~/binary_operations/built/tests$ ./my_binary_tests
 
 ### 🎯 Demo Output (with explanations):
 ```
-Enter base of input number (b1): 2
-Enter base to convert to (b2): 10
-Enter number in base 2: 101
-Equivalent number in base 10: 5
-```
+./my_binary
+Enter 2 binary figures and operation ('+' or '-'): 11011 11111 -
+Sum: 11100
+Result: 11100
+./my_binary
+Enter 2 binary figures and operation ('+' or '-'): 11011 11111 +
+Sum: 11010
+Carry: 1
+Result: 11010
 
+```
 ```
 ✅ Unit Test Output:
-./BaseConverterTests
+./my_binary_tests
 Running main() from ./googletest/src/gtest_main.cc
-[==========] Running 5 tests from 5 test suites.
+[==========] Running 6 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 1 test from CharToValTest
-[ RUN      ] CharToValTest.HandlesDigitsAndLetters
-[       OK ] CharToValTest.HandlesDigitsAndLetters (0 ms)
-[----------] 1 test from CharToValTest (0 ms total)
-
-[----------] 1 test from ValToCharTest
-[ RUN      ] ValToCharTest.HandleValues
-[       OK ] ValToCharTest.HandleValues (0 ms)
-[----------] 1 test from ValToCharTest (0 ms total)
-
-[----------] 1 test from ToDecimalTest
-[ RUN      ] ToDecimalTest.ConvertsToDecimalCorrectly
-[       OK ] ToDecimalTest.ConvertsToDecimalCorrectly (0 ms)
-[----------] 1 test from ToDecimalTest (0 ms total)
-
-[----------] 1 test from FromDecimalTest
-[ RUN      ] FromDecimalTest.ConvertsFromDecimalCorrectly
-[       OK ] FromDecimalTest.ConvertsFromDecimalCorrectly (0 ms)
-[----------] 1 test from FromDecimalTest (0 ms total)
-
-[----------] 1 test from RoundTripTest
-[ RUN      ] RoundTripTest.BaseToBaseRoundTrip
-[       OK ] RoundTripTest.BaseToBaseRoundTrip (0 ms)
-[----------] 1 test from RoundTripTest (0 ms total)
+[----------] 6 tests from BinaryOperationsTest
+[ RUN      ] BinaryOperationsTest.SimpleAddition
+Sum: 0011
+Sum: 1000
+[       OK ] BinaryOperationsTest.SimpleAddition (0 ms)
+[ RUN      ] BinaryOperationsTest.AdditionWithCarry
+Sum: 0000
+Carry: 1
+[       OK ] BinaryOperationsTest.AdditionWithCarry (0 ms)
+[ RUN      ] BinaryOperationsTest.SimpleSubtraction
+Sum: 0010
+Carry: 1
+Sum: 10101
+Carry: 1
+[       OK ] BinaryOperationsTest.SimpleSubtraction (0 ms)
+[ RUN      ] BinaryOperationsTest.BorrowPropagation
+Sum: 0111
+Carry: 1
+[       OK ] BinaryOperationsTest.BorrowPropagation (0 ms)
+[ RUN      ] BinaryOperationsTest.EqualInputs
+Sum: 0000
+Carry: 1
+[       OK ] BinaryOperationsTest.EqualInputs (0 ms)
+[ RUN      ] BinaryOperationsTest.LengthMismatch
+[       OK ] BinaryOperationsTest.LengthMismatch (0 ms)
+[----------] 6 tests from BinaryOperationsTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 5 tests from 5 test suites ran. (0 ms total)
-[  PASSED  ] 5 tests.
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.
 ```
-
