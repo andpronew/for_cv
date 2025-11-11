@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/my_binary_tests.dir/my_test_binary.cpp.o -o my_binary_tests  ../src/libbinary_lib.a /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 

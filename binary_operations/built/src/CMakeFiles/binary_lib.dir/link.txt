@@ -1,2 +1,0 @@
-/usr/bin/ar qc libbinary_lib.a CMakeFiles/binary_lib.dir/my_binary_operations.cpp.o
-/usr/bin/ranlib libbinary_lib.a

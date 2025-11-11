@@ -2,6 +2,7 @@
 build/
 xcuserdata
 cmake-build-debug/
+binary_operations/built/
 .idea/
 bazel-bin
 bazel-genfiles
