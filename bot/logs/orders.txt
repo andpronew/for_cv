@@ -1,1 +1,0 @@
-timestamp | SYMBOL | SIDE | PRICE | QTY | executedQty | ORDERID | STATUS | commission | capital_usdt | btc_balance | profit_accum
