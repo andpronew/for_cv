@@ -9,6 +9,13 @@ Detailed descriptions, build instructions, and usage examples are located in the
 ---
 
 ## 🔹 Projects Overview
+### [Bot]
+???
+---
+
+### [Strassen_matrix_production]
+???
+---
 
 ### [🧮 Binary Operations Library (C++)](./binary_operations)
 A simple C++ project that demonstrates **manual binary addition and subtraction** using **two’s complement arithmetic** — exactly how real CPU ALUs perform it.  
