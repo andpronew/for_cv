@@ -1,0 +1,3 @@
+/home/andpro/Documents/Andr/bot/build/CMakeFiles/bot.dir
+/home/andpro/Documents/Andr/bot/build/CMakeFiles/edit_cache.dir
+/home/andpro/Documents/Andr/bot/build/CMakeFiles/rebuild_cache.dir

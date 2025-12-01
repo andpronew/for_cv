@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/bot.dir/main.cpp.o CMakeFiles/bot.dir/src/binance_client.cpp.o CMakeFiles/bot.dir/src/bot.cpp.o CMakeFiles/bot.dir/src/ladder_strategy.cpp.o CMakeFiles/bot.dir/src/logging.cpp.o -o bot  /usr/lib/x86_64-linux-gnu/libcurl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
