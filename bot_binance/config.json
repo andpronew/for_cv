@@ -1,0 +1,17 @@
+{
+  "api_key": "R8PddwMBYtxGLb5PnUtSxUZYSiC1ctfnbHbPnXFiA5ai7edkH31RS58BWgUTuvvI",
+  "secret_key": "APUzWzuHp2drAFRZN86JjB5gHBNlrU4nZdWaD1VP9DykxKVwIvM6xZRVYxYy3tbv",
+  "sandbox": true,
+  "symbol": "BTCFDUSD",
+  "poll_interval": 5,
+  "ladder_size": 5,
+  "ladder_step": 1.0,
+  "order_size": 0.0001,
+  "test_order_qty": 0.0001,
+  "aggressive_limit_test": true,
+  "order_timeout": 30,
+  "capital": 100.0,
+  "min_profit_quote": 0.0,
+  "order_check_interval": 1,
+  "prevent_loss_sells": true
+}
