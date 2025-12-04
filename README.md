@@ -19,8 +19,8 @@ C++17 CLI tool leveraging Apache Arrow and Zstd libraries to array integrity and
 
 ---
 
-### [Strassen_matrix_production]
-???
+### [🔢 Strassen matrix production](./Strassen_matrix_production)
+Efficient implementation of the Strassen matrix multiplication algorithm in C++. This divide-and-conquer approach reduces time complexity from O(n³) to approximately O(n^2.81) by minimizing the number of recursive multiplications.
 
 ---
 
