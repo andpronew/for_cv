@@ -9,12 +9,19 @@ Detailed descriptions, build instructions, and usage examples are located in the
 ---
 
 ## 🔹 Projects Overview
-### [Bot]
-???
+### [🤖 Traiding Bot for crypto exchange](./bot_binance)
+Real-time market data processor for crypto exchange: using REST and WebSocket APIs with HMAC authentication, handling real-time market data and order lifecycle management. Demonstrates robust system design and network programming, integrating crypto exchange infrastructure.
+
+---
+
+### [📦 Parquet Data Auditor](./???)
+C++17 CLI tool leveraging Apache Arrow and Zstd libraries to array integrity and ID continuity. Ensures structural correctness of time-series data for reliable analysis in trading platforms.
+
 ---
 
 ### [Strassen_matrix_production]
 ???
+
 ---
 
 ### [🧮 Binary Operations Library (C++)](./binary_operations)
