@@ -65,7 +65,7 @@ This repository serves as a **demonstration of C++ programming proficiency**, fo
 
 📧 [andriihisko@gmail.com](mailto:andriihisko@gmail.com) || 📱 [\+380936728827](tel:+380936728827) ([WhatsApp](https://wa.me/380936728827)/[Telegram](https://t.me/x004147)/[Viber](https://chat?number=+380936728827)) || 💻 [GitHub](https://github.com/andpronew/for_cv) || 🔗 [LinkedIn](http://www.linkedin.com/in/andrii-hisko-6054b739b)
 
-📍Odesa, Ukraine (*seeking remote role: home office, stable internet and power; immediately available for any-time work)*  
+**📍Odesa, Ukraine (seeking remote role: home office, stable internet and power; immediately available for any-time work)** 
 ---
 
 **🧾 SUMMARY**:
