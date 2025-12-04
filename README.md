@@ -93,7 +93,7 @@ This repository serves as a **demonstration of C++ programming proficiency**, fo
 C++17 CLI tool leveraging Apache Arrow and Zstd libraries to array integrity and ID continuity. Ensures structural correctness of time-series data for reliable analysis in trading platforms.  
 **🔒 *Custom Smart Pointers Library (Used in Finance Tools)***:  
 Developed custom RAII-based unique\_ptr, shared\_ptr, and weak\_ptr with thread-safe reference counting and lifetime tracking for robust memory management. Integrated into memory-critical trading data modules to prevent memory leaks and ensure safe ownership semantics.
----
+
 **🔧(In development**: directory scanner utility, shared memory/mmap tool, TCP server with listen socket, signal handler)
 
 ---
