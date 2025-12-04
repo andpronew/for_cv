@@ -61,7 +61,7 @@ This repository serves as a **demonstration of C++ programming proficiency**, fo
 
 ## 🧩 Author
 
-##👤 Andrii Hisko – C++ Software Developer
+## 👤 Andrii Hisko – C++ Software Developer
 
 📧 [andriihisko@gmail.com](mailto:andriihisko@gmail.com) || 📱 [\+380936728827](tel:+380936728827) ([WhatsApp](https://wa.me/380936728827)/[Telegram](https://t.me/x004147)/[Viber](https://chat?number=+380936728827)) || 💻 [GitHub](https://github.com/andpronew/for_cv) || 🔗 [LinkedIn](http://www.linkedin.com/in/andrii-hisko-6054b739b)
 
@@ -83,6 +83,7 @@ This repository serves as a **demonstration of C++ programming proficiency**, fo
 📊 **Algorithms & Data Structures:** sorting (quick, merge, heap, radix); searching (binary search, hash-based lookups); trees  (BST, AVL, B-trees, segment trees); graphs (BFS, DFS, Dijkstra, topological sort); hash tables and open addressing; stacks, queues, deques, priority queues; dynamic programming; bitwise manipulation and mask-based logic; time/space complexity analysis (Big-O); applied in time-series validation, binary protocol parsing, and numeric encoding tools; etc.
 
 🌐 **Languages:** fluent English, native Russian and Ukrainian.  
+
 ---
 
 **🔧 PROJECTS**: *All of these projects (and many others) are available on my GitHub [profile](https://github.com/andpronew/for_cv)*
@@ -92,8 +93,8 @@ This repository serves as a **demonstration of C++ programming proficiency**, fo
 C++17 CLI tool leveraging Apache Arrow and Zstd libraries to array integrity and ID continuity. Ensures structural correctness of time-series data for reliable analysis in trading platforms.  
 **🔒 *Custom Smart Pointers Library (Used in Finance Tools)***:  
 Developed custom RAII-based unique\_ptr, shared\_ptr, and weak\_ptr with thread-safe reference counting and lifetime tracking for robust memory management. Integrated into memory-critical trading data modules to prevent memory leaks and ensure safe ownership semantics.
+(In development: directory scanner utility, shared memory/mmap tool, TCP server with listen socket, signal handler)
 
-//добавлю: shared memory / memory-mapped file; утилита, которая рекурсивно сканирует заданную директорию и тд; простой TCP сервер с listen socket; сигнал-хендлер   
 ---
 
 **🎓 EDUCATION**:
