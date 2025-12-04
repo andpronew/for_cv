@@ -111,7 +111,7 @@ Developed custom RAII-based unique\_ptr, shared\_ptr, and weak\_ptr with thread-
 
 💼 **M.B.A.** – *American Institute of Business and Economics* (Moscow), 2001: Graduate business education with focus on strategy, operations, and management. Enhanced skills in finance, leadership, marketing, operations and project management.
 
-Ongoing **self-education** in C++, systems programming, and computer science fundamentals through advanced textbooks (*“Computer Organization and Design”* by Patterson & Hennessy, etc.) and online courses (computer science: Harvard, MIT, Carnegie Mellon; C++, Linux, bash, etc.). Regularly follow CppCon talks and ISO C++ updates to stay current with modern standards.
+📚 Ongoing **self-education** in C++, systems programming, and computer science fundamentals through advanced textbooks (*“Computer Organization and Design”* by Patterson & Hennessy, etc.) and online courses (computer science: Harvard, MIT, Carnegie Mellon; C++, Linux, bash, etc.). Regularly follow CppCon talks and ISO C++ updates to stay current with modern standards.
 
 ---
 
