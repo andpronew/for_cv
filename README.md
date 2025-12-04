@@ -61,20 +61,22 @@ This repository serves as a **demonstration of C++ programming proficiency**, fo
 
 ## 🧩 Author
 
-**👤 Andrii Hisko – C++ Software Developer**
+##👤 Andrii Hisko – C++ Software Developer
 
 📧 [andriihisko@gmail.com](mailto:andriihisko@gmail.com) || 📱 [\+380936728827](tel:+380936728827) ([WhatsApp](https://wa.me/380936728827)/[Telegram](https://t.me/x004147)/[Viber](https://chat?number=+380936728827)) || 💻 [GitHub](https://github.com/andpronew/for_cv) || 🔗 [LinkedIn](http://www.linkedin.com/in/andrii-hisko-6054b739b)
 
-**📍Odesa, Ukraine (seeking remote role: home office, stable internet and power; immediately available for any-time work)** 
+📍Odesa, Ukraine *(seeking remote role: home office, stable internet and power; immediately available for any-time work)* 
+
 ---
 
 **🧾 SUMMARY**:
 
 **C++ Software Developer** seeking a remote position with a company where I can apply my system-level developing skills. **Ph.D.**\-eduсated (**Theoretical Physics**) professional transitioning from a 25 year career in business management into a C++ systems programming role. Strong foundation in physics and mathematics combined with modern **C++17/20/23 skills**. Created several complex C++ codebases demonstrating expertise in **low-level programming, memory management, multithreading, and performance optimization**. This unique blend of technical prowess and business insight offers a distinctive perspective to engineering teams.  
+
 ---
 
 **🛠️ SKILLS**:  
-![][image1]**Software Engineering Competencies:** ***Modern C++*** (17/20/23): STL, OOP, RAII, SOLID principles; smart pointers and ownership semantics; multithreading and concurrency (std::thread, mutex, condition\_variable, atomics); memory management and object lifetime; move semantics and copy elision; template programming; design patterns; resource-safe code and exception safety; low-level I/O, file descriptors, memory-mapped files (mmap); Linux system calls and signals; understanding of CPU cache, stack vs heap, memory alignment and padding; modular design and unit testing (GoogleTest) practices; etc. Strong understanding of ***computer architecture*** and ***operating systems*** fundamentals: CPU microarchitecture (ISA, assembly language (x86/MIPS/ARM)), instruction pipelines, RAM and cache behavior, memory alignment, virtual memory, system calls, process/thread scheduling, etc. and how these concepts influence C++ performance and design.
+**🔧 Software Engineering Competencies:** ***Modern C++*** (17/20/23): STL, OOP, RAII, SOLID principles; smart pointers and ownership semantics; multithreading and concurrency (std::thread, mutex, condition\_variable, atomics); memory management and object lifetime; move semantics and copy elision; template programming; design patterns; resource-safe code and exception safety; low-level I/O, file descriptors, memory-mapped files (mmap); Linux system calls and signals; understanding of CPU cache, stack vs heap, memory alignment and padding; modular design and unit testing (GoogleTest) practices; etc. Strong understanding of ***computer architecture*** and ***operating systems*** fundamentals: CPU microarchitecture (ISA, assembly language (x86/MIPS/ARM)), instruction pipelines, RAM and cache behavior, memory alignment, virtual memory, system calls, process/thread scheduling, etc. and how these concepts influence C++ performance and design.
 
 💻 **Systems & Tools:** Linux shell, API; GCC; Bash scripting; CMake, Ninja; Git/GitHub; VS Code, Vim; GoogleTest.
 
