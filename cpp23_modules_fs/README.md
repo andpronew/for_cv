@@ -1,24 +1,3 @@
-# *Base Converter Project with CMake and GoogleTest*
-
-**Goal**: The program converts numbers from an input base b1 to an output base b2 (with bases between 2 and 16 including). Digits above 9 are represented by letters A–F
-
-**Skills**: to learn deeply aconversion between different base numbers
-
-**Description**: The code provides functions to map characters to values and vice versa, convert an input string in base b1 to a decimal value, and convert a decimal value to a string in base b2
-
-
-### 📁 Project Structure
-```text
-base_converter/
-├── CMakeLists.txt
-├── src/
-│   ├── my_converter.h
-│   ├── my_converter.cpp
-│   └── main.cpp
-└── tests/
-|   └── my_test_conversion.cpp
-└── README.md
-```
 
 ### Build project and tests
 ```
@@ -98,6 +77,7 @@ Module export/import patterns
 
 ### 🛠️ Building the Project
 
+```
 Requires:
 
 Clang 18
@@ -112,8 +92,11 @@ cmake -B build -G Ninja \
     -DCMAKE_CXX_COMPILER=clang++-18 \
     -DCMAKE_C_COMPILER=clang-18
 cmake --build build
+```
 
 ### ▶️ Running the Program
+
+```
 ./build/hello
 Enter a path: files
 
@@ -123,15 +106,17 @@ Use either:
 absolute paths (/home/.../files)
 
 or run the program from the directory containing your folder.
+```
 
 ### 🧩 Code Example (Module Overview)
+```
 export module my_module;
 
 export namespace my_module
 {
     void bulk_rename(const std::string& path_str);
 }
-
+```
 
 And its implementation uses modern C++23 and std::filesystem to safely rename files.
 
