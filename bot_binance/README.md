@@ -224,6 +224,71 @@ Handles all exceptions and logs critical errors
 
 Timestamps and rotates runtime logs in logs/
 ```
+### 📂 Sequence diagram 
+
+The bot's end-to-end order flow, from startup through continuous operation. It illustrates how the main thread and strategy thread interact with the Binance API and track orders/profits:
+```
+Main Thread                LadderStrategy Thread              Binance API
+    |                              |                              |
+    |-- Load config.json ----------|                              |
+    |   (API keys, params)         |                              |
+    |-- Init BinanceClient ------->| (API keys, sandbox mode)     |
+    |                              |                              |
+    |-- [Optional] Place small test orders to verify connection ->| 
+    |                              |<-- (Test BUY/SELL responses) |
+    |                              |                              |
+    |-- Launch LadderStrategy thread --> LadderStrategy::run()    |
+    |                              |-- Start strategy loop ------>|
+    |                              |   (logs "Starting strategy") |
+    |                              |                              |
+    |                              |   **Loop each order_check_interval (e.g. 1s)**:
+    |                              |   1. **Get current price** ->| (GET /ticker/price)
+    |                              |      <--- mid-price (latest) |
+    |                              |   2. **Place ladder BUY orders**:
+    |                              |      For i = 1 to ladder_size:
+    |                              |         compute buy_price = mid_price - i*ladder_step
+    |                              |         reserve `capital` for order
+    |                              |         place LIMIT BUY ->| (POST /order)
+    |                              |         <--- orderId returned (order open) |
+    |                              |         attach reservation to orderId
+    |                              |      (If not enough capital, stop placing more buys)
+    |                              |   3. **Check open orders** ->| (GET /openOrders)
+    |                              |      <--- list of open orders (JSON) --------|
+    |                              |   4. **Process open orders**:
+    |                              |      log each open order to `logs/orders.txt`
+    |                              |      for each order:
+    |                              |         if `status == FILLED` or executedQty > 0:
+    |                              |            LadderStrategy::process_filled_order:
+    |                              |            if BUY filled:
+    |                              |               release reserved capital (spent)
+    |                              |               increase BTC balance (executedQty)
+    |                              |               *if profit >= min_profit_quote*: 
+    |                              |                   target_sell_price = buy_avg + buffer 
+    |                              |                   ensure target_sell_price > bestBid
+    |                              |                   place LIMIT SELL ->| (POST /order)
+    |                              |                   <--- orderId for sell (open) -|
+    |                              |               *if profit < min_profit_quote*:
+    |                              |                   **skip** immediate sell (hold asset)
+    |                              |            if SELL filled:
+    |                              |               add sale proceeds to capital_usdt
+    |                              |               decrease BTC balance (sold quantity)
+    |                              |               (realized profit added to capital)
+    |                              |      end for
+    |                              |   5. **Reconcile reservations**:
+    |                              |      for any orderId no longer in open orders:
+    |                              |          release any remaining reserved capital
+    |                              |   6. **Sleep** for `order_check_interval` seconds
+    |                              |   -- Loop repeats (go to step 1) --
+    |                              |                              |
+    |<<-- (Meanwhile, in parallel) -->>|                              |
+    |   **Poll open orders** every `poll_interval` seconds:        |
+    |   Main -> BinanceClient.poll_open_orders(symbol) ->| (GET /openOrders)
+    |                              |<--- open orders JSON --------|
+    |   logs summary of each open order (id, side, price, status) to console
+    |                              |                              |
+    |   ... (Main thread continues logging while strategy thread runs) ...
+```
+
 ### 📜 Logging System
 1. logs/bot_YYYY-MM-DD_HHMMSS.txt
 
