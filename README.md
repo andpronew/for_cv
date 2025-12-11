@@ -24,7 +24,7 @@ Efficient implementation of the Strassen matrix multiplication algorithm in C++.
 
 ---
 
-### [⚙️ C++23_modules_filesystem operations](./cpp23_modules_fs)
+### [⚙️ C++23 modules filesystem operations](./cpp23_modules_fs)
 A minimal C++23 project demonstrating the use of C++ Modules and the <filesystem> library.
 Implements a simple bulk-rename utility that iterates through a directory and renames files using modern C++ features (modules, std::filesystem, strong typing, clean error handling). Includes a working CMake 3.31 + Clang 18 configuration using FILE_SET CXX_MODULES.
 
