@@ -359,31 +359,31 @@ avoids unprofitable SELLs
 ```
 ### 🧭 Design Goals
 
-Robust to API failures
+✔ Robust to API failures
 
-Profit-first ladder logic
+✔ Profit-first ladder logic
 
-Maker-only trading
+✔ Maker-only trading
 
-Easy debugging through logs
+✔ Easy debugging through logs
 
-Avoid accidental market orders
+✔ Avoid accidental market orders
 
-Safe for Testnet experimentation
+✔ Safe for Testnet experimentation
 
-🏁 Summary
+### 🏁 Summary
 
-Bot Andr is a fully working, modular trading bot built in modern C++17.
+The Bot is a fully working, modular trading bot built in modern C++17.
 It is structured for clarity, extensibility, and correctness, and includes:
 
-A strong Binance API client with signing & error handling
+✔ A strong Binance API client with signing & error handling
 
-A production-ready ladder market-making engine
+✔ A production-ready ladder market-making engine
 
-FIFO profit accounting
+✔ FIFO profit accounting
 
-Detailed logging and replayable history
+✔ Detailed logging and replayable history
 
-Testnet support and safety checks
+✔ Testnet support and safety checks
 
-The project can be further extended into a full-scale algorithmic trading system.
+✔ The project can be further extended into a full-scale algorithmic trading system.
