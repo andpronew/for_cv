@@ -21,7 +21,7 @@ The toolkit includes:
 
 The toolkit is designed for HFT / crypto market data pipelines, where correctness of parquet snapshots is critical.
 
-# 🚀 Key Features
+### 🚀 Key Features
 ✔ Fast C++23 implementation (GNU++23/Clang++23)
 
 ✔ High-performance scanning of huge Parquet datasets (millions of rows)
@@ -38,7 +38,7 @@ flattened arrays with offsets;
 
 flattened arrays without offsets (flagged as informational limitation)
 
-📂 Project Structure
+### 📂 Project Structure
 ```text
 /
 ├── parquet_audit_new.cpp          # Main multi-format auditor  (top/depth/trade)
@@ -51,7 +51,7 @@ flattened arrays without offsets (flagged as informational limitation)
 └── README.md                      # (this file)
 ```
 
-# 🛠️ Build Instructions
+### 🛠️ Build Instructions
 Dependencies
 
 ```
@@ -68,7 +68,7 @@ g++ -std=gnu++23 -O3 parquet_trade_spot_audit.cpp -lparquet -larrow -lzstd -o pa
 g++ -std=gnu++23 -O3 parquet_top_spot_audit.cpp -lparquet -larrow -lzstd -o parquet_top_spot_audit
 ```
 
-# 📊 1. Universal Auditor — parquet_audit_new.cpp
+### 📊 1. Universal Auditor — parquet_audit_new.cpp
 
 Multi-format analyzer for:
 
@@ -134,7 +134,7 @@ or for depth:
 Auditing: bn_depth_spot_DFUSDT_2025_09_08.parquet
 Wrote audit report to: parquet_audit_report_depth.txt (problematic files: 309)
 
-# 📊 2. Trade Spot Auditor — parquet_trade_spot_audit.cpp
+### 📊 2. Trade Spot Auditor — parquet_trade_spot_audit.cpp
 Purpose
 
 Detect anomalies in Binance spot trade parquet files.
@@ -167,7 +167,7 @@ Produces NDJSON:
 
 ./parquet_trade_spot_audit dir/ anomalies.ndjson
 
-# 📊 3. Depth Spot Auditor — parquet_depth_audit.cpp
+### 📊 3. Depth Spot Auditor — parquet_depth_audit.cpp
 
 Specialized for order book depth delta Parquet files.
 
@@ -196,7 +196,7 @@ extremely small/large files (likely incomplete)
 Example:
 ./parquet_depth_audit /path/to/*.parquet anomalies_depth.ndjson
 
-# 📊 4. Top Spot Auditor — parquet_top_spot_audit.cpp
+### 📊 4. Top Spot Auditor — parquet_top_spot_audit.cpp
 
 Analyzes top-of-book snapshots.
 
@@ -218,7 +218,7 @@ statistical outliers for px_avg, qty_avg, row count
 
 incomplete files (meta_rows < threshold)
 
-# 🧪 5. Parquet Reader — parquet_reader.cpp
+### 🧪 5. Parquet Reader — parquet_reader.cpp
 
 A simple inspector tool that prints:
 
@@ -232,12 +232,12 @@ per-row values
 
 Useful for debugging anomalies found by auditors.
 
-# 🔄 6. Parquet → CSV converter — parquet2csv.cpp
+### 🔄 6. Parquet → CSV converter — parquet2csv.cpp
 
 Not part of the audit pipeline.
 Used to convert Parquet into human-readable CSV for debugging.
 
-# 🧠 Interpretation of Anomalies
+### 🧠 Interpretation of Anomalies
 Critical anomalies (file considered “problematic”)
 
 timestamps going backwards
@@ -264,7 +264,7 @@ very small files
 
 anomalies in global aggregated stats
 
-⚠️ Error Handling
+### ⚠️ Error Handling
 
 Errors that do not appear in NDJSON (because file could not be read at all):
 
@@ -283,7 +283,7 @@ damaged row-group
 
 These filenames should be captured separately in failed_files.txt.
 
-🧩 Supported Parquet Schemas
+### 🧩 Supported Parquet Schemas
 
 Toolkit supports:
 
@@ -297,7 +297,7 @@ scalar top-level columns
 
 mixed-schema depth files (bid/ask arrays, eventTime, IDs)
 
-# 📈 Example Audit Flow
+### 📈 Example Audit Flow
 # Universal multi-type audit
 ./parquet_audit_new dir/*.parquet --out=report.txt
 
@@ -313,28 +313,28 @@ mixed-schema depth files (bid/ask arrays, eventTime, IDs)
 # Debug single file
 ./parquet_reader file.parquet
 
-🏁 Summary
+### 🏁 Summary
 
 This toolkit provides:
 
-High-performance C++23 Parquet scanning
+✔ High-performance C++23 Parquet scanning
 
-Depth, top, and trade-specific anomaly detectors
+✔ Depth, top, and trade-specific anomaly detectors
 
-Multi-layer consistency checks
+✔ Multi-layer consistency checks
 
-Statistical outlier detection
+✔ Statistical outlier detection
 
-Clean text or NDJSON reports
+✔ Clean text or NDJSON reports
 
-Practical tools for building a robust market-data pipeline
+✔ Practical tools for building a robust market-data pipeline
 
 It is suitable for:
 
-HFT/quant research
+✔ HFT/quant research
 
-validating downloaded Binance datasets
+✔ validating downloaded Binance datasets
 
-building ETL pipelines
+✔ building ETL pipelines
 
-academic research on order-book microstructure
+✔ academic research on order-book microstructure
