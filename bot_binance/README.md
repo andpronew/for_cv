@@ -139,13 +139,13 @@ Full separation of I/O (HTTP) from strategy logic
 ```
 2. LadderStrategy — Market-Making Engine
 
-📄 Implementation references:
+### 📄 Implementation references:
 ```
 Headers: ladder_strategy.h
 Implementation: ladder_strategy.cpp
 ```
 How it works:
-
+```
 Reads config (ladder_size, ladder_step, order_size).
 
 On startup:
@@ -209,11 +209,11 @@ Handles partial fills
 Ignores negative/invalid responses gracefully
 
 Ensures ladder is always consistent (replace missing orders)
-
+```
 3. Bot — Orchestration Layer
 
 The main loop in bot.cpp:
-
+```
 Reads config.json
 
 Creates BinanceClient + LadderStrategy
@@ -223,12 +223,12 @@ Calls strategy.run()
 Handles all exceptions and logs critical errors
 
 Timestamps and rotates runtime logs in logs/
-
-📜 Logging System
+```
+### 📜 Logging System
 1. logs/bot_YYYY-MM-DD_HHMMSS.txt
 
 High-level execution log:
-
+```
 startup
 
 API requests
@@ -238,11 +238,11 @@ errors
 ladder events
 
 profit updates
-
+```
 2. logs/orders.txt
 
 Append-only raw log of order events:
-
+```
 order creation
 
 fills
@@ -252,11 +252,11 @@ partial fills
 commission
 
 timestamps
-
+```
 3. logs/orders_sorted.txt
 
 A derived, tabular file that sorts all orders and adds:
-
+```
 realised profit
 
 profit_accum (cumulative)
@@ -264,27 +264,27 @@ profit_accum (cumulative)
 buy/sell matching details
 
 Ideal for external analytics or Python/Pandas processing.
-
-💰 Profit Accounting (FIFO)
+```
+### 💰 Profit Accounting (FIFO)
 
 The bot maintains a FIFO queue of BUY fills:
-
+```
 BUY  qty=0.1 at price 20000
 BUY  qty=0.2 at price 20100
 BUY  qty=0.1 at price 19950
-
+```
 
 When a SELL of quantity q fills, it consumes from the queue:
-
+```
 SELL qty=0.15 at 20200
   → consumes 0.1 from 20000
   → consumes 0.05 from 20100
-
+```
 
 Profit = Σ (sell_price - buy_price) * matched_qty - commissions
 
-🔐 Security & API Handling
-
+### 🔐 Security & API Handling
+```
 Uses HMAC-SHA256 via OpenSSL::Crypto
 
 All secret keys stored only in config.json and in RAM
@@ -294,9 +294,9 @@ No logging of secret_key
 Requests include timestamp + signature
 
 Sandbox trading supported (no real money)
-
-⚠️ Known Limitations / TODO
-
+```
+### ⚠️ Known Limitations / TODO
+```
 Rate-limit handling (HTTP 429 / 418) can be improved
 
 State persistence across restarts (tracked_orders_, buy_queue_)
@@ -308,13 +308,12 @@ Add true dry-run simulation mode
 Move logging to JSON for easier analytics
 
 Add GoogleTest suite for strategy and client
-
-▶️ Running the Bot
+```
+### ▶️ Running the Bot
 ./bot
 
-
 Make sure:
-
+```
 config.json is in the project root
 
 logs/ directory exists
@@ -322,18 +321,18 @@ logs/ directory exists
 you are connected to the internet
 
 sandbox=true if you use Testnet
-
-🧪 Development Workflow
+```
+### 🧪 Development Workflow
 
 Clean & rebuild:
-
+```
 rm -rf build
 cmake -S . -B build
 cmake --build build --clean-first
-
-📈 Example Ladder Operation
+```
+### 📈 Example Ladder Operation
 Initial mid_price = 30000
-
+```
 BUY  @ 29999
 BUY  @ 29998
 BUY  @ 29997
@@ -345,10 +344,9 @@ SELL @ 30002
 SELL @ 30003
 SELL @ 30004
 SELL @ 30005
-
-
+```
 As orders fill, ladder_strategy:
-
+```
 logs fills
 
 updates FIFO inventory
@@ -358,8 +356,8 @@ computes realised P&L
 replaces missing orders
 
 avoids unprofitable SELLs
-
-🧭 Design Goals
+```
+### 🧭 Design Goals
 
 Robust to API failures
 
