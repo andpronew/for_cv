@@ -72,34 +72,34 @@ g++ -std=gnu++23 -O3 parquet_top_spot_audit.cpp -lparquet -larrow -lzstd -o parq
 
 Multi-format analyzer for:
 
-top_spot
+```top_spot
 
 trade_spot
 
 depth_spot
-
+```
 Usage
 ./parquet_audit_new /path/to/*.parquet --out=report.txt
 
 Detects dozens of anomalies, including:
 A. Time anomalies
-
+```
 non_monotonic_ts — timestamps go backwards
 
 huge gaps in timestamps
 
 corrupted row-groups
-
+```
 B. ID anomalies
-
+```
 lastId < firstId
 
 id_overlap_count (duplicate deltas)
 
 id_gap_count (missing segments)
-
+```
 C. Structural mismatches
-
+```
 flattened arrays without offsets
 
 offset mismatches
@@ -111,9 +111,9 @@ mismatched element counts
 zero counts in px/qty arrays
 
 arrays declared but empty
-
+```
 D. Market data logic
-
+```
 crossed_book_count — best bid ≥ best ask
 
 price_change_10x_count — price jumps more than ×10
@@ -133,14 +133,14 @@ or for depth:
 
 Auditing: bn_depth_spot_DFUSDT_2025_09_08.parquet
 Wrote audit report to: parquet_audit_report_depth.txt (problematic files: 309)
-
+```
 ### 📊 2. Trade Spot Auditor — parquet_trade_spot_audit.cpp
 Purpose
 
 Detect anomalies in Binance spot trade parquet files.
 
 Flags anomalous when:
-
+```
 empty files (rows_scanned == 0)
 
 metadata mismatch (rows_scanned != meta_rows)
@@ -162,7 +162,7 @@ qty mean
 ts gaps
 
 z-score > 3 deviations
-
+```
 Produces NDJSON:
 
 ./parquet_trade_spot_audit dir/ anomalies.ndjson
@@ -172,7 +172,7 @@ Produces NDJSON:
 Specialized for order book depth delta Parquet files.
 
 Detects:
-
+```
 missing/null ts, firstId, lastId, eventTime
 
 lastId < firstId
@@ -192,7 +192,7 @@ abnormal price/qty changes
 improperly flattened arrays
 
 extremely small/large files (likely incomplete)
-
+```
 Example:
 ./parquet_depth_audit /path/to/*.parquet anomalies_depth.ndjson
 
@@ -201,7 +201,7 @@ Example:
 Analyzes top-of-book snapshots.
 
 Flags:
-
+```
 null bid/ask price/qty
 
 timestamp monotonicity issues
@@ -217,11 +217,11 @@ duplicate snapshots
 statistical outliers for px_avg, qty_avg, row count
 
 incomplete files (meta_rows < threshold)
-
+```
 ### 🧪 5. Parquet Reader — parquet_reader.cpp
 
 A simple inspector tool that prints:
-
+```
 schema
 
 row groups
@@ -229,7 +229,7 @@ row groups
 column contents
 
 per-row values
-
+```
 Useful for debugging anomalies found by auditors.
 
 ### 🔄 6. Parquet → CSV converter — parquet2csv.cpp
@@ -238,8 +238,8 @@ Not part of the audit pipeline.
 Used to convert Parquet into human-readable CSV for debugging.
 
 ### 🧠 Interpretation of Anomalies
-Critical anomalies (file considered “problematic”)
-
+Critical anomalies (file considered “problematic”):
+```
 timestamps going backwards
 
 missing mandatory fields
@@ -263,7 +263,7 @@ flattened arrays without offsets
 very small files
 
 anomalies in global aggregated stats
-
+```
 ### ⚠️ Error Handling
 
 Errors that do not appear in NDJSON (because file could not be read at all):
@@ -272,7 +272,7 @@ ERROR: open/read failed … Unexpected end of stream: Read 0 values, expected N
 
 
 Meaning:
-
+```
 Parquet file is physically corrupted
 
 interrupted download
@@ -280,13 +280,13 @@ interrupted download
 broken footer
 
 damaged row-group
-
+```
 These filenames should be captured separately in failed_files.txt.
 
 ### 🧩 Supported Parquet Schemas
 
 Toolkit supports:
-
+```
 flattened arrays
 
 arrays with offset columns
@@ -296,23 +296,24 @@ nested list encoding (Arrow style)
 scalar top-level columns
 
 mixed-schema depth files (bid/ask arrays, eventTime, IDs)
-
+```
 ### 📈 Example Audit Flow
-# Universal multi-type audit
+```
+Universal multi-type audit
 ./parquet_audit_new dir/*.parquet --out=report.txt
 
-# Depth-focused audit (NDJSON)
+Depth-focused audit (NDJSON)
 ./parquet_depth_audit dir/*.parquet anomalies_depth.ndjson
 
-# Trade audit
+Trade audit
 ./parquet_trade_spot_audit dir/*.parquet anomalies_trade.ndjson
 
-# Top-of-book snapshots
+Top-of-book snapshots
 ./parquet_top_spot_audit dir/*.parquet anomalies_top.ndjson
 
-# Debug single file
+Debug single file
 ./parquet_reader file.parquet
-
+```
 ### 🏁 Summary
 
 This toolkit provides:
