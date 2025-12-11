@@ -1,25 +1,3 @@
-
-### Build project and tests
-```
-mkdir build && cd build
-cmake ..
-make
-```
-### Run demo
-~/base_converter/build/src$ ./BaseConverterApp
-
-### Run unit tests
-./BaseConverterTests
-
-### 🎯 Demo Output (with explanations):
-```
-Enter base of input number (b1): 2
-Enter base to convert to (b2): 10
-Enter number in base 2: 101
-Equivalent number in base 10: 5
-```
-
-
 # 📘 *Bulk Rename Utility — Modern C++23 + Modules + CMake 3.31*
 
 A minimal but fully functional example of C++23 Modules, Clang 18, and modern CMake (3.31) using FILE_SET CXX_MODULES.
