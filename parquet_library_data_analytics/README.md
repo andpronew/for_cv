@@ -54,6 +54,7 @@ flattened arrays without offsets (flagged as informational limitation)
 # 🛠️ Build Instructions
 Dependencies
 
+```
 Apache Arrow / Parquet
 
 zstd
@@ -65,8 +66,9 @@ g++ -std=gnu++23 -O3 parquet_audit_new.cpp -lparquet -larrow -lzstd -o parquet_a
 g++ -std=gnu++23 -O3 parquet_depth_audit.cpp -lparquet -larrow -lzstd -o parquet_depth_audit
 g++ -std=gnu++23 -O3 parquet_trade_spot_audit.cpp -lparquet -larrow -lzstd -o parquet_trade_spot_audit
 g++ -std=gnu++23 -O3 parquet_top_spot_audit.cpp -lparquet -larrow -lzstd -o parquet_top_spot_audit
+```
 
-📊 1. Universal Auditor — parquet_audit_new.cpp
+# 📊 1. Universal Auditor — parquet_audit_new.cpp
 
 Multi-format analyzer for:
 
@@ -132,7 +134,7 @@ or for depth:
 Auditing: bn_depth_spot_DFUSDT_2025_09_08.parquet
 Wrote audit report to: parquet_audit_report_depth.txt (problematic files: 309)
 
-📊 2. Trade Spot Auditor — parquet_trade_spot_audit.cpp
+# 📊 2. Trade Spot Auditor — parquet_trade_spot_audit.cpp
 Purpose
 
 Detect anomalies in Binance spot trade parquet files.
@@ -165,7 +167,7 @@ Produces NDJSON:
 
 ./parquet_trade_spot_audit dir/ anomalies.ndjson
 
-📊 3. Depth Spot Auditor — parquet_depth_audit.cpp
+# 📊 3. Depth Spot Auditor — parquet_depth_audit.cpp
 
 Specialized for order book depth delta Parquet files.
 
@@ -194,7 +196,7 @@ extremely small/large files (likely incomplete)
 Example:
 ./parquet_depth_audit /path/to/*.parquet anomalies_depth.ndjson
 
-📊 4. Top Spot Auditor — parquet_top_spot_audit.cpp
+# 📊 4. Top Spot Auditor — parquet_top_spot_audit.cpp
 
 Analyzes top-of-book snapshots.
 
@@ -216,7 +218,7 @@ statistical outliers for px_avg, qty_avg, row count
 
 incomplete files (meta_rows < threshold)
 
-🧪 5. Parquet Reader — parquet_reader.cpp
+# 🧪 5. Parquet Reader — parquet_reader.cpp
 
 A simple inspector tool that prints:
 
@@ -230,12 +232,12 @@ per-row values
 
 Useful for debugging anomalies found by auditors.
 
-🔄 6. Parquet → CSV converter — parquet2csv.cpp
+# 🔄 6. Parquet → CSV converter — parquet2csv.cpp
 
 Not part of the audit pipeline.
 Used to convert Parquet into human-readable CSV for debugging.
 
-🧠 Interpretation of Anomalies
+# 🧠 Interpretation of Anomalies
 Critical anomalies (file considered “problematic”)
 
 timestamps going backwards
@@ -295,7 +297,7 @@ scalar top-level columns
 
 mixed-schema depth files (bid/ask arrays, eventTime, IDs)
 
-📈 Example Audit Flow
+# 📈 Example Audit Flow
 # Universal multi-type audit
 ./parquet_audit_new dir/*.parquet --out=report.txt
 
