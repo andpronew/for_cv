@@ -14,13 +14,19 @@ Real-time market data processor for crypto exchange: using REST and WebSocket AP
 
 ---
 
-### [📦 Parquet Data Auditor](./???)
+### [📦 Parquet Data Auditor](./parquet_library_data_analytics)
 C++17 CLI tool leveraging Apache Arrow and Zstd libraries to array integrity and ID continuity. Ensures structural correctness of time-series data for reliable analysis in trading platforms.
 
 ---
 
 ### [🔢 Strassen matrix production](./Strassen_matrix_production)
 Efficient implementation of the Strassen matrix multiplication algorithm in C++. This divide-and-conquer approach reduces time complexity from O(n³) to approximately O(n^2.81) by minimizing the number of recursive multiplications.
+
+---
+
+### [⚙️ C++23_modules_filesystem operations](./cpp23_modules_fs)
+A minimal C++23 project demonstrating the use of C++ Modules and the <filesystem> library.
+Implements a simple bulk-rename utility that iterates through a directory and renames files using modern C++ features (modules, std::filesystem, strong typing, clean error handling). Includes a working CMake 3.31 + Clang 18 configuration using FILE_SET CXX_MODULES.
 
 ---
 
